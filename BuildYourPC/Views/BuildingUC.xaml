@@ -1,0 +1,176 @@
+﻿<UserControl x:Class="BuildYourPC.Views.BuildingUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:BuildYourPC.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/images/back.png"/>
+        </Grid.Background>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="0.5*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="0.25*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.25*"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="1" Grid.Column="1" BorderBrush="DarkMagenta" BorderThickness="5" CornerRadius="5">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.75*"/>
+                    <RowDefinition Height="3*"/>
+                </Grid.RowDefinitions>
+
+                <ComboBox FontSize="30" Grid.Row="0" Name="CPUs" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" ItemsSource="{Binding CPUs, Mode=TwoWay}" DisplayMemberPath="Name" SelectedItem="{Binding TempCPU, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" IsDropDownOpen="True" IsEditable="true" Text="{Binding CPUfilter}">
+                    <ComboBox.ToolTip>
+                        <ToolTip FontSize="20">
+                            CPU - here is few words about what is CPU, why computer need it and how to choose correct CPU
+                        </ToolTip>
+                    </ComboBox.ToolTip>
+                </ComboBox>
+                <StackPanel Grid.Row="1" Background="White">
+                    <TextBlock FontSize="24" Text="{Binding CPUinfo}"></TextBlock>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <Border Grid.Row="1" Grid.Column="4" BorderBrush="DarkMagenta" BorderThickness="5" CornerRadius="5">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.75*"/>
+                    <RowDefinition Height="3*"/>
+                </Grid.RowDefinitions>
+
+                <ComboBox FontSize="30" Grid.Row="0" Name="RAMs" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" ItemsSource="{Binding RAMs, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" DisplayMemberPath="Name" SelectedItem="{Binding TempRAM, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="true" IsEditable="true" Text="Select RAM">
+                    <ComboBox.ToolTip>
+                        <ToolTip FontSize="20">
+                            RAM - here is few words about what is RAM, why computer need it and how to choose correct RAM
+                        </ToolTip>
+                    </ComboBox.ToolTip>
+                </ComboBox>
+                <StackPanel Grid.Row="1" Background="White">
+                    <TextBlock FontSize="24" Text="{Binding RAMinfo}"></TextBlock>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <Border Grid.Row="3" Grid.Column="1" BorderBrush="DarkMagenta" BorderThickness="5" CornerRadius="5">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.75*"/>
+                    <RowDefinition Height="3*"/>
+                </Grid.RowDefinitions>
+
+                <ComboBox FontSize="30" Grid.Row="0" Name="Motherboards" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" ItemsSource="{Binding Motherboards}" DisplayMemberPath="Name" SelectedItem="{Binding TempMotherboard, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="true" IsEditable="true" Text="Select Motherboard">
+                    <ComboBox.ToolTip>
+                        <ToolTip FontSize="20">
+                            Motherboard - here is few words about what is Motherboard, why computer need it and how to choose correct Motherboard
+                        </ToolTip>
+                    </ComboBox.ToolTip>
+                </ComboBox>
+                <StackPanel Grid.Row="1" Background="White">
+                    <TextBlock FontSize="24" Text="{Binding Motherboardinfo}"></TextBlock>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <Border Grid.Row="3" Grid.Column="4" BorderBrush="DarkMagenta" BorderThickness="5" CornerRadius="5">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.75*"/>
+                    <RowDefinition Height="3*"/>
+                </Grid.RowDefinitions>
+
+                <ComboBox FontSize="30" Grid.Row="0" Name="Memories" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" ItemsSource="{Binding Memories}" DisplayMemberPath="Name" SelectedItem="{Binding TempMemory, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="true" IsEditable="true" Text="Select Memory">
+                    <ComboBox.ToolTip>
+                        <ToolTip FontSize="20">
+                            Memory - here is few words about what is Memory, why computer need it and how to choose correct Memory
+                        </ToolTip>
+                    </ComboBox.ToolTip>
+                </ComboBox>
+                <StackPanel Grid.Row="1" Background="White">
+                    <TextBlock FontSize="24" Text="{Binding Memoryinfo}"></TextBlock>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <Border Grid.Row="5" Grid.Column="1" BorderBrush="DarkMagenta" BorderThickness="5" CornerRadius="5">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.75*"/>
+                    <RowDefinition Height="3*"/>
+                </Grid.RowDefinitions>
+
+                <ComboBox FontSize="30" Grid.Row="0" Name="GraphicCards" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" ItemsSource="{Binding GraphicCards}" DisplayMemberPath="Name" SelectedItem="{Binding TempGraphicCard, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="true" IsEditable="true" Text="Select Graphic Card">
+                    <ComboBox.ToolTip>
+                        <ToolTip FontSize="20">
+                            GraphicCard - here is few words about what is GraphicCard, why computer need it and how to choose correct GraphicCard
+                        </ToolTip>
+                    </ComboBox.ToolTip>
+                </ComboBox>
+                <StackPanel Grid.Row="1" Background="White">
+                    <TextBlock FontSize="24" Text="{Binding GraphicCardinfo}"></TextBlock>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <Border Grid.Row="5" Grid.Column="4" BorderBrush="DarkMagenta" BorderThickness="5" CornerRadius="5">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.75*"/>
+                    <RowDefinition Height="3*"/>
+                </Grid.RowDefinitions>
+
+                <ComboBox FontSize="30" Grid.Row="0" Name="PowerSupplies" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" ItemsSource="{Binding PowerSupplies}" DisplayMemberPath="Name" SelectedItem="{Binding TempPowerSupply, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="true" IsEditable="true" Text="Select Power Supply">
+                    <ComboBox.ToolTip>
+                        <ToolTip FontSize="20">
+                            PowerSupply - here is few words about what is PowerSupply, why computer need it and how to choose correct PowerSupply
+                        </ToolTip>
+                    </ComboBox.ToolTip>
+                </ComboBox>
+                <StackPanel Grid.Row="1" Background="White">
+                    <TextBlock FontSize="24" Text="{Binding PowerSupplyinfo}"></TextBlock>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+
+        <Grid Grid.Row="1" Grid.Column="2">
+            <Button Height="60" VerticalAlignment="Top" Content="+" Command="{Binding AddCPUCommand}"></Button>            
+        </Grid>
+        
+
+        <Button Grid.Column="4" Grid.Row="7" Margin="2" Content="Check" FontSize="40"/>
+
+        <Grid Grid.Column="1" Grid.Row="7">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="10*"/>
+            </Grid.ColumnDefinitions>
+            
+            <CheckBox Grid.Column="0" IsChecked="{Binding IsShowUserAdded}"/>
+            <TextBlock Text="Show user-added" FontSize="20" Grid.Column="1"/>
+        </Grid>
+
+    </Grid>
+</UserControl>
