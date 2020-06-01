@@ -158,7 +158,23 @@
         <Grid Grid.Row="1" Grid.Column="2">
             <Button Height="60" VerticalAlignment="Top" Content="+" Command="{Binding AddCPUCommand}"></Button>            
         </Grid>
-        
+        <Grid Grid.Row="3" Grid.Column="2">
+            <Button Height="60" VerticalAlignment="Top" Content="+" Command="{Binding AddMotherboardCommand}"></Button>
+        </Grid>
+        <Grid Grid.Row="5" Grid.Column="2">
+            <Button Height="60" VerticalAlignment="Top" Content="+" Command="{Binding AddGraphicCardCommand}"></Button>
+        </Grid>
+
+        <Grid Grid.Row="1" Grid.Column="5">
+            <Button Height="60" VerticalAlignment="Top" Content="+" Command="{Binding AddRAMCommand}"></Button>
+        </Grid>
+        <Grid Grid.Row="3" Grid.Column="5">
+            <Button Height="60" VerticalAlignment="Top" Content="+" Command="{Binding AddMemoryCommand}"></Button>
+        </Grid>
+        <Grid Grid.Row="5" Grid.Column="5">
+            <Button Height="60" VerticalAlignment="Top" Content="+" Command="{Binding AddPowerSupplyCommand}"></Button>
+        </Grid>
+
 
         <Button Grid.Column="4" Grid.Row="7" Margin="2" Content="Check" FontSize="40"/>
 

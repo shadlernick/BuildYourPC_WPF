@@ -30,7 +30,7 @@
             <ColumnDefinition Width="0.5*"/>
         </Grid.ColumnDefinitions>
 
-        <Button Grid.Column="3" Grid.Row="0" Margin="5" Content="Login" FontSize="40"/>
+        <Button Grid.Column="3" Grid.Row="0" Margin="15" Content="Login" FontSize="40"/>
         <!--<ContentControl Grid.Row="0" Name="contentControl1" Content="{Binding}"/>-->
 
         <ContentControl Grid.Row="1" Grid.ColumnSpan="5" Name="contentControl" Content="{Binding}"/>

@@ -46,3 +46,4 @@ C:\Users\PROTEINUM\source\repos\BuildYourPC\BuildYourPC\bin\Debug\netcoreapp3.1\
 C:\Users\PROTEINUM\source\repos\BuildYourPC\BuildYourPC\obj\Debug\netcoreapp3.1\AddComponentWindow.g.cs
 C:\Users\PROTEINUM\source\repos\BuildYourPC\BuildYourPC\obj\Debug\netcoreapp3.1\AddComponentWindow.baml
 C:\Users\PROTEINUM\source\repos\BuildYourPC\BuildYourPC\obj\Debug\netcoreapp3.1\BuildYourPC.csprojAssemblyReference.cache
+C:\Users\PROTEINUM\source\repos\BuildYourPC\BuildYourPC\obj\Debug\netcoreapp3.1\BuildYourPC.Migrations._new.resources

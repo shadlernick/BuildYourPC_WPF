@@ -293,16 +293,49 @@ namespace BuildYourPC.ViewModels
         }
         #endregion
 
-        private RelayCommand _addCPUCommand;
-        public RelayCommand AddCPUCommand
-        {
-            get => _addCPUCommand;
-        }
 
         public BuildingVM(User tempUser)
         {
             UpdateCollections();
             _addCPUCommand = new RelayCommand(AddCPUOpenWindow);
+            _addMotherboardCommand = new RelayCommand(AddMotherboardOpenWindow);
+            _addGraphicCardCommand = new RelayCommand(AddGraphicCardOpenWindow);
+            _addRAMCommand = new RelayCommand(AddRAMOpenWindow);
+            _addMemoryCommand = new RelayCommand(AddMemoryOpenWindow);
+            _addPowerSupplyCommand = new RelayCommand(AddPowerSupplyOpenWindow);
+        }
+
+        #region RelayCommands
+
+        private RelayCommand _addCPUCommand;
+        private RelayCommand _addMotherboardCommand;
+        private RelayCommand _addGraphicCardCommand;
+        private RelayCommand _addRAMCommand;
+        private RelayCommand _addMemoryCommand;
+        private RelayCommand _addPowerSupplyCommand;
+        public RelayCommand AddCPUCommand
+        {
+            get => _addCPUCommand;
+        }
+        public RelayCommand AddMotherboardCommand
+        {
+            get => _addMotherboardCommand;
+        }
+        public RelayCommand AddGraphicCardCommand
+        {
+            get => _addGraphicCardCommand;
+        }
+        public RelayCommand AddRAMCommand
+        {
+            get => _addRAMCommand;
+        }
+        public RelayCommand AddMemoryCommand
+        {
+            get => _addMemoryCommand;
+        }
+        public RelayCommand AddPowerSupplyCommand
+        {
+            get => _addPowerSupplyCommand;
         }
 
         public void AddCPUOpenWindow()
@@ -310,6 +343,33 @@ namespace BuildYourPC.ViewModels
             var addComponentWindow = new AddComponentWindow(new AddCPUVM());
             addComponentWindow.ShowDialog();
         }
+        public void AddMotherboardOpenWindow()
+        {
+            var addComponentWindow = new AddComponentWindow(new AddCPUVM());
+            addComponentWindow.ShowDialog();
+        }
+        public void AddGraphicCardOpenWindow()
+        {
+            var addComponentWindow = new AddComponentWindow(new AddCPUVM());
+            addComponentWindow.ShowDialog();
+        }
+        public void AddRAMOpenWindow()
+        {
+            var addComponentWindow = new AddComponentWindow(new AddCPUVM());
+            addComponentWindow.ShowDialog();
+        }
+        public void AddMemoryOpenWindow()
+        {
+            var addComponentWindow = new AddComponentWindow(new AddCPUVM());
+            addComponentWindow.ShowDialog();
+        }
+        public void AddPowerSupplyOpenWindow()
+        {
+            var addComponentWindow = new AddComponentWindow(new AddCPUVM());
+            addComponentWindow.ShowDialog();
+        }
+
+        #endregion
 
         public void MakeFiltration()
         {
